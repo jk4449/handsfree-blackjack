@@ -53,6 +53,7 @@ simply search through all recorded capture and if one of the three “split” h
 “split” and vice versa.
 
 **Key Gesture Thresholds**
+
 Key gesture threshold is used in the identification of “split” and “double down”. A function (cv2.matchShape) is
 called to compare the difference between the real-time hand pose and key gestures that we are looking for (“split”
 and “double down”). If the difference is smaller than a threshold, the real-time hand pose can be identified as that
@@ -70,6 +71,7 @@ fingers. The little twists and small adjustments made the split difference highe
 under difference of 0.15, I decided to make the threshold 0.15.
 
 **Stay Still Threshold**
+
 For a stationary gesture to be recognized, the hand pose should stay still for Stay Still Threshold amount of time.
 The threshold should not be too short that it recognizes a gesture that it not intended to be recognized, nor too
 long that it makes the user wait too much. I determined this threshold by first setting it to about 2 seconds, and
@@ -77,6 +79,7 @@ gradually lowering it while using the system. I stopped lowering the threshold w
 stationary gesture when I was not completely still posing and waiting for it. 
 
 **Hand Dir Threshold**
+
 Hand direction is recognized when the user moved their hand “significantly” from their last position. I computed the
 movement from position A to position B by the movement in the center point of the bounding rectangle of their
 hand contour. That “significantly” is determined by this threshold. When I was testing the system by myself, I would
@@ -103,6 +106,7 @@ vertical movement component. Below is a capture of intended “stand”. We can 
 bounding rect moves up as the hand moves the the right.
 
 **Skin Recognition Threshold**
+
 Last but not least, one the most important part of the algorithm is accurate hand detection. Research by Shaik,
 Khamar Basha, et al.[1] show that it is more efficient to work in the YCbCr color space than the RGB color space.
 YCbCr color space does not mix the color with intensity, and hence can have better skin detection under uneven
@@ -114,6 +118,7 @@ thresholds are as follows: skin_lower = \[80, 135, 85\], skin_upper = \[200, 200
 [1] Shaik, Khamar Basha, et al. “Comparative Study of Skin Color Detection and Segmentation in HSV and Ycbcr
 Color Space.” Procedia Computer Science, vol. 57, 2015, pp. 41–48., https://doi.org/10.1016/
 j.procs.2015.07.362.
+
 [2] Kolkur, S., et al. “Human Skin Detection Using RGB, HSV and YCbCr Color Models.” Proceedings of the
 International Conference on Communication and Signal Processing 2016 (ICCASP 2016), 2017, pp. 324–332.,
 https://doi.org/10.2991/iccasp-16.2017.51.
