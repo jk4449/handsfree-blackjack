@@ -2,6 +2,7 @@
 WebApp where people can play blackjack with hand gestures. No click/keyboard input necessary!
 
 Recognizable Gestures
+
 • Hit: Double tap (vertical Up-Down-Up-Down motion)
 
 • Stand: Horizontal hand wave (horizontal Left-Right-Left-Right motion)
