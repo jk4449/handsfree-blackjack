@@ -1,6 +1,12 @@
 # handsfree-blackjack
 WebApp where people can play blackjack with hand gestures. No click/keyboard input necessary!
 
+**Files Overview**
+Main files are located in storefront/playground
+1. game.py: Defines the blackjack game class: records the status of the game and provides helper functions to proceed the game
+2. utils.py: Various helper functions
+3. views.py: Streams both the game display and the webcam to html
+
 Recognizable Gestures
 
 • Hit: Double tap (vertical Up-Down-Up-Down motion)
